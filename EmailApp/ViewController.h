@@ -7,9 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MessageUI/MessageUI.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <MFMailComposeViewControllerDelegate>
 
+@property (weak, nonatomic) IBOutlet UILabel *emailLabel;
+@property (strong, nonatomic) UIImage *image;
 
+-(IBAction)send:(id)sender;
 @end
 
